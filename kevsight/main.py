@@ -1,3 +1,4 @@
+import argparse
 from datetime import date
 from dateutil.relativedelta import relativedelta  # type: ignore[import-untyped]
 
@@ -36,8 +37,20 @@ def push_sighting_to_vulnerability_lookup(source, vulnerability, creation_date):
         )
 
 
-def main():
-    date_since = date.today() - relativedelta(days=3)
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        prog="KEVSight",
+        description="",
+    )
+    parser.add_argument(
+        "--since",
+        default=2,
+        help="Specify the number of days from today to include in the query.",
+    )
+
+    arguments = parser.parse_args()
+
+    date_since = date.today() - relativedelta(days=int(arguments.since))
     query = Query(min_date_added=date_since)
     ct = client.get_catalog(query)
     for vulnerability in ct.vulnerabilities:

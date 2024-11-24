@@ -13,7 +13,6 @@ It's easy to [install](https://github.com/pypa/pipx?tab=readme-ov-file#on-linux)
 $ pipx install KEVSight
 $ export KEVSight_CONFIG=~/.KEVSight/conf.py
 $ cisa_kev --download-path /home/cedric/.cisa_kev/known_exploited_vulnerabilities.json  download
-$ KEVSight
 ```
 
 The configuration for KEVSight should be defined in a Python file (e.g., ``~/.KEVSight/conf.py``).
@@ -21,6 +20,15 @@ You must then set an environment variable (``KEVSight_CONFIG``) with the full pa
 
 
 ## Usage
+
+```bash
+$ KEVSight --help
+usage: KEVSight [-h] [--since SINCE]
+
+options:
+  -h, --help     show this help message and exit
+  --since SINCE  Specify the number of days from today to include in the query
+```
 
 
 

@@ -34,3 +34,4 @@ eproject.cfg
 *.log
 
 kevsight/conf.py
+cisa_kev/

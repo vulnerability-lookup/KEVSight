@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "kevsight"
 version = "0.1.0"
-description = ""
+description = "A client to generate sightings for Vulnerability-Lookup from the Known Exploited Vulnerabilities (KEV) catalog."
 authors = ["Cédric Bonhomme <cedric@cedricbonhomme.org>"]
 license = "GPL-3.0-or-later"
 readme = "README.md"

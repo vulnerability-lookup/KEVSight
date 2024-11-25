@@ -1,7 +1,9 @@
 # KEVSight
 
-Push Sightings to Vulnerability-Lookup based on data from the
-[Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog).
+A client to generate sightings for
+[Vulnerability-Lookup](https://github.com/cve-search/vulnerability-lookup) from the
+[Known Exploited Vulnerabilities (KEV)](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+catalog.
 
 
 ## Installation

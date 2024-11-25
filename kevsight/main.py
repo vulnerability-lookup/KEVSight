@@ -56,4 +56,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # Point of entry in execution mode.
     main()

@@ -13,12 +13,12 @@ It's easy to [install](https://github.com/pypa/pipx?tab=readme-ov-file#on-linux)
 
 ```bash
 $ pipx install KEVSight
-$ export KEVSight_CONFIG=~/.KEVSight/conf.py
+$ export KEVSIGHT_CONFIG=~/.KEVSight/conf.py
 $ cisa_kev --download-path /home/cedric/.cisa_kev/known_exploited_vulnerabilities.json  download
 ```
 
 The configuration for KEVSight should be defined in a Python file (e.g., ``~/.KEVSight/conf.py``).
-You must then set an environment variable (``KEVSight_CONFIG``) with the full path to this file.
+You must then set an environment variable (``KEVSIGHT_CONFIG``) with the full path to this file.
 
 
 ## Usage

@@ -6,8 +6,8 @@ authors = ["Cédric Bonhomme <cedric@cedricbonhomme.org>"]
 license = "GPL-3.0-or-later"
 readme = "README.md"
 
-homepage = "https://github.com/cedricbonhomme/KEVSight"
-repository = "https://github.com/cedricbonhomme/KEVSight"
+homepage = "https://github.com/vulnerability-lookup/KEVSight"
+repository = "https://github.com/vulnerability-lookup/KEVSight"
 
 keywords = ["Vulnerability-Lookup", "Vulnerability", "CVE", "KEV", "PyVulnerabilityLookup"]
 

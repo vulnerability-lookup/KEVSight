@@ -1,16 +1,38 @@
-[tool.poetry]
-name = "kevsight"
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[project]
+name = "KEVSight"
 version = "0.1.1"
 description = "A client to generate sightings for Vulnerability-Lookup from the Known Exploited Vulnerabilities (KEV) catalog."
-authors = ["Cédric Bonhomme <cedric@cedricbonhomme.org>"]
+authors = [
+    {name = "Cédric Bonhomme", email = "cedric.bonhomme@circl.lu"}
+]
 license = "GPL-3.0-or-later"
 readme = "README.md"
+keywords = ["Vulnerability-Lookup", "Vulnerability", "CVE", "CISA", "KEV"]
+# classifieres is dynamic because we want to create Python classifiers automatically
+dynamic = ["classifiers"]
 
+requires-python = "^3.10"
+dependencies = [
+    "pyvulnerabilitylookup (>=2.2.0)",
+    "cisa-kev (>=2.0.2)"
+]
+
+[project.urls]
 homepage = "https://github.com/vulnerability-lookup/KEVSight"
 repository = "https://github.com/vulnerability-lookup/KEVSight"
 
-keywords = ["Vulnerability-Lookup", "Vulnerability", "CVE", "KEV", "PyVulnerabilityLookup"]
 
+[project.scripts]
+KEVSight = "kevsight.main:main"
+
+
+[tool.poetry]
+requires-poetry = ">=2.0"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
@@ -21,28 +43,13 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
     "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"
 ]
-
 include = [
     "README.md",
     "COPYING",
     "kevsight/conf_sample.py",
 ]
-
-[tool.poetry.scripts]
-KEVSight = "kevsight.main:main"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-cisa-kev = "^2.0.2"
-pyvulnerabilitylookup = "^2.1.0"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
 
 
 [tool.mypy]
@@ -60,7 +67,7 @@ warn_unreachable = true
 show_error_context = true
 pretty = true
 
-exclude = "build|dist|docs|fedivuln.egg-info"
+exclude = "build|dist|docs"
 
 [tool.isort]
 profile = "black"

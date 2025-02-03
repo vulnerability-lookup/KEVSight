@@ -1,7 +1,7 @@
 # KEVSight
 
 A client to generate sightings for
-[Vulnerability-Lookup](https://github.com/cve-search/vulnerability-lookup) from the
+[Vulnerability-Lookup](https://github.com/vulnerability-lookup/vulnerability-lookup) from the
 [Known Exploited Vulnerabilities (KEV)](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 catalog.
 

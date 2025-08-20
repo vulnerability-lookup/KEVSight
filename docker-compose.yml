@@ -1,0 +1,17 @@
+name: "KEVSight sighting client"
+
+services:
+
+  kevsight:
+    image: vuln_lookup_kevsight
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - APP_IMAGE=python:3.11-slim
+    restart: always
+    environment:
+      - PYTHONUNBUFFERED=TRUE
+      - KEVSIGHT_CONFIG=/etc/conf.py
+    volumes:
+      - "./kevsight/conf.py:/etc/conf.py"

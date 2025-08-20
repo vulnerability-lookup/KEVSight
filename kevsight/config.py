@@ -29,6 +29,6 @@ finally:
 vulnerability_lookup_base_url = conf.vulnerability_lookup_base_url
 vulnerability_auth_token = conf.vulnerability_auth_token
 
-sighthing_type = conf.sighting_type
+sighting_type = conf.sighting_type
 
 catalog_path = conf.catalog_path

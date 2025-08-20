@@ -21,6 +21,25 @@ The configuration for KEVSight should be defined in a Python file (e.g., ``~/.KE
 You must then set an environment variable (``KEVSIGHT_CONFIG``) with the full path to this file.
 
 
+### With Docker
+
+```bash
+git clone https://github.com/vulnerability-lookup/KEVSight
+cd KEVSight
+
+# Make sure conf.py exists in the project root before running
+docker compose up --build
+```
+
+> [!NOTE]
+> The docker-compose.yml expects a conf.py file in the root directory.
+> You can create it manually or copy the provided example:
+> 
+> ```bash
+> $ cp kevsight/conf_sample.py conf.py
+> ```
+
+
 ## Usage
 
 ```bash

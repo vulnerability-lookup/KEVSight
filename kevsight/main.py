@@ -28,8 +28,6 @@ def main() -> None:
 
     arguments = parser.parse_args()
 
-    catalog_version = client.get_catalog().version
-
     date_since = date.today() - relativedelta(days=int(arguments.since))
     query = Query(min_date_added=date_since)
 
@@ -38,9 +36,10 @@ def main() -> None:
         datetime_obj = datetime.combine(vulnerability.date_added, datetime.min.time())
         utc_aware_datetime = datetime_obj.replace(tzinfo=pytz.UTC)
         sighting = {
-            "source": f"CISA-KEV-Version:{catalog_version}",
+            # "source": f"CISA-KEV-Version:{client.get_catalog().version}",
+            "source": "CISA-KEV",
             "vulnerability": vulnerability.cve_id,
-            "type": config.sighthing_type,
+            "type": config.sighting_type,
             "creation_timestamp": utc_aware_datetime,
         }
 
